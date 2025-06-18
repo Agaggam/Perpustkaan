@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📚 BukuSD - Perpustakaan Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="header">
+    <h1>📚 Perpustakaan Online</h1>
+    <p class="subtitle">Perpustakaan Digital dengan Sistem LinkedList</p>
+    <p2 class="coba">Kebutuhan ini untuk menyelesaikan tugas struktur data</p2>
+  </div>
+
+  <div class="controls">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="🔍 Cari judul atau penulis..." />
+    </div>
+    <div class="filter-group">
+      <label>🎯 Genre:</label>
+      <select id="genreFilter"><option value="">Semua Genre</option></select>
+    </div>
+    <div class="filter-group">
+      <label>⭐ Rating Minimal:</label> <select id="minRatingFilter">
+        <option value="">Semua Rating</option>
+        <option value="1">1 Bintang & Ke Atas</option>
+        <option value="2">2 Bintang & Ke Atas</option>
+        <option value="3">3 Bintang & Ke Atas</option>
+        <option value="4">4 Bintang & Ke Atas</option>
+        <option value="5">5 Bintang</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>🔃 Urutkan:</label>
+      <select id="sortSelect">
+        <option value="title">Judul A-Z</option>
+        <option value="title-desc">Judul Z-A</option>
+        <option value="author">Penulis A-Z</option>
+        <option value="author-desc">Penulis Z-A</option>
+        <option value="genre">Genre A-Z</option>
+        <option value="rating-desc">Rating Tertinggi</option>
+        <option value="rating-asc">Rating Terendah</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stats-info">📖 <span id="bookCount">0</span> dari <span id="totalBooks">0</span> buku</div>
+    <div class="view-toggle">
+      <button id="gridView" class="view-btn active">⊞ Grid</button>
+      <button id="listView" class="view-btn">☰ List</button>
+    </div>
+  </div>
+
+  <div id="booksContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
